@@ -1,47 +1,33 @@
-// --- 1. SILVER/WHITE CONFETTI EFFECT ---
-const duration = 60 * 60 * 1000;
-const animationEnd = Date.now() + duration;
-const defaults = { startVelocity: 5, spread: 360, ticks: 150, zIndex: 0 };
+const heroSection = document.querySelector('.hero');
 
-function randomInRange(min, max) {
-  return Math.random() * (max - min) + min;
+// --- SILVER CONFETTI LOGIC ---
+function fireConfetti() {
+  const rect = heroSection.getBoundingClientRect();
+  // Only fires when header is on screen
+  if (rect.top < window.innerHeight && rect.bottom > 0) {
+    confetti({
+      particleCount: 4, 
+      angle: 90,
+      spread: 70,
+      origin: { x: Math.random(), y: Math.random() - 0.2 },
+      colors: ['#ffffff', '#c0c0c0', '#808080', '#ff0000'],
+      gravity: 0.6,
+      scalar: 0.7,
+      ticks: 200
+    });
+  }
 }
 
-const interval = setInterval(function() {
-  const timeLeft = animationEnd - Date.now();
+setInterval(fireConfetti, 150); 
 
-  if (timeLeft <= 0) {
-    return clearInterval(interval);
-  }
-
-  const particleCount = 1;
-
-  // Floating Silver/White Particles
-  confetti({
-    ...defaults,
-    particleCount,
-    origin: { x: randomInRange(0, 1), y: Math.random() - 0.2 },
-    colors: ['#C0C0C0', '#FFFFFF', '#E5E4E2'],
-    gravity: randomInRange(0.2, 0.5),
-    scalar: randomInRange(0.4, 0.8),
-    drift: randomInRange(-0.4, 0.4)
-  });
-}, 300);
-
-// --- 2. PROJECT FILTERING LOGIC ---
+// --- TAB FILTERING LOGIC ---
 function filterProjects(category, event) {
     const cards = document.querySelectorAll('.project-card');
     const buttons = document.querySelectorAll('.tab-btn');
-
-    // Update active button state
     buttons.forEach(btn => btn.classList.remove('active'));
-    if (event) {
-        event.target.classList.add('active');
-    }
+    if (event) event.target.classList.add('active');
 
-    // Filter cards with a simple fade
     cards.forEach(card => {
-        card.style.transition = "opacity 0.3s ease";
         if (card.classList.contains(category)) {
             card.style.display = "block";
             setTimeout(() => { card.style.opacity = "1"; }, 10);
@@ -52,7 +38,4 @@ function filterProjects(category, event) {
     });
 }
 
-// Ensure Option 1 is visible on start
-window.onload = () => {
-    filterProjects('opt1');
-};
+window.onload = () => filterProjects('opt1');
