@@ -1,71 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<body>
-
-    <header class="hero">
-        <div class="container">
-            <h1>Your Name</h1>
-            <p>Developer | Designer | Tech Enthusiast</p>
-            <a href="#projects" class="btn">View My Work</a>
-        </div>
-    </header>
-
-    <section id="about" class="section">
-        <div class="container">
-            <h2>About Me</h2>
-            <div class="underline"></div>
-            <p>I build functional, clean applications with a focus on user experience and data. Currently working on performance tracking tools and sleek web interfaces.</p>
-        </div>
-    </section>
-
-    <section id="projects" class="section bg-alt">
-        <div class="container">
-            <h2>Featured Projects</h2>
-            <div class="underline"></div>
-            <div class="project-grid">
-                
-                <div class="project-card">
-                    <div class="project-img" style="background-image: url('images/recovery-tracker.jpg');"></div>
-                    <div class="project-info">
-                        <h3>Recovery Tracker Pro</h3>
-                        <p>A custom tool to track caffeine intake and physical recovery scores.</p>
-                        <a href="#" class="project-link">View Repo &rarr;</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-img" style="background-image: url('images/placeholder.jpg');"></div>
-                    <div class="project-info">
-                        <h3>Future Project</h3>
-                        <p>This is where your next big idea goes. Paste your project details here.</p>
-                        <a href="#" class="project-link">View Repo &rarr;</a>
-                    </div>
-                </div>
-
+<section id="about" class="section">
+    <div class="container">
+        <h2>About Me</h2>
+        <div class="underline"></div>
+        
+        <div class="about-main">
+            <div class="about-text">
+                <p>Insert your first paragraph here. Talk about your background and what drives your passion for development.</p>
+                <p>Insert your second paragraph here. Focus on the technical side—the languages you love and the problems you like solving.</p>
+                <p>Insert your third paragraph here. Mention your personal philosophy or what you do when you aren't coding.</p>
+            </div>
+            <div class="about-images">
+                <img src="images/profile1.jpg" alt="Profile 1" class="side-img">
+                <img src="images/profile2.jpg" alt="Profile 2" class="side-img">
             </div>
         </div>
-    </section>
 
-    <footer id="contact" class="section">
-        <div class="container">
-            <h2>Get In Touch</h2>
-            <div class="underline"></div>
-            <p>Looking to collaborate or just want to say hi?</p>
-            <div class="contact-links">
-                <a href="mailto:your@email.com">Email</a>
-                <a href="https://github.com/yourusername">GitHub</a>
-                <a href="#">LinkedIn</a>
+        <div class="reading-now">
+            <div class="reading-info">
+                <h3>What I'm Reading</h3>
+                <p>Share a bit about your learning journey or the genres that keep you inspired outside of work hours.</p>
             </div>
-            <p class="copyright">&copy; 2026 Your Name</p>
+            <div class="book-grid">
+                <img src="images/book1.jpg" alt="Book 1" class="book-cover">
+                <img src="images/book2.jpg" alt="Book 2" class="book-cover">
+                <img src="images/book3.jpg" alt="Book 3" class="book-cover">
+            </div>
         </div>
-    </footer>
+    </div>
+</section>
 
-</body>
-</html>
+<section id="projects" class="section bg-alt">
+    <div class="container">
+        <h2>Projects</h2>
+        <div class="underline"></div>
+
+        <div class="filter-tabs">
+            <button class="tab-btn active" onclick="filterProjects('opt1')">Option 1</button>
+            <button class="tab-btn" onclick="filterProjects('opt2')">Option 2</button>
+            <button class="tab-btn" onclick="filterProjects('opt3')">Option 3</button>
+        </div>
+
+        <div class="project-grid" id="projectGrid">
+            <div class="project-card opt1">
+                <div class="project-img" style="background-image: url('images/p1.jpg');"></div>
+                <div class="project-info">
+                    <h3>Project One</h3>
+                    <p>Brief description of the project goals and tech stack.</p>
+                    <a href="#" class="project-link">View Project &rarr;</a>
+                </div>
+            </div>
+            </div>
+    </div>
+</section>
