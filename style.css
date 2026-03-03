@@ -1,6 +1,6 @@
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
 html { scroll-behavior: smooth; }
-body { background: #050505; color: #e0e0e0; line-height: 1.6; overflow-x: hidden; }
+body { background: #050505; color: #e0e0e0; line-height: 1.6; }
 
 .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 .section { padding: 100px 0; }
@@ -16,18 +16,21 @@ h1, h2, h3 {
 
 .underline { width: 60px; height: 3px; background: #ff0000; margin: 15px 0 30px; box-shadow: 0 0 10px #ff0000; }
 
+/* HERO & EMBERS */
 .hero { 
     height: 100vh; 
     display: flex; 
     align-items: center; 
     justify-content: center; 
     text-align: center;
-    background: radial-gradient(circle at center, #111 0%, #050505 100%);
+    background: #050505;
     position: relative;
     overflow: hidden; 
 }
-.hero h1 { font-size: 5rem; font-weight: 900; }
-.hero p { font-size: 1.2rem; color: #888; text-transform: uppercase; letter-spacing: 5px; margin-bottom: 40px; }
+.hero-content { z-index: 10; position: relative; pointer-events: none; }
+.hero-content h1 { font-size: 5rem; font-weight: 900; }
+.hero-content p { font-size: 1.1rem; color: #888; text-transform: uppercase; letter-spacing: 5px; margin-bottom: 40px; }
+.hero-content .btn { pointer-events: auto; }
 
 .btn { 
     padding: 15px 40px; 
@@ -42,20 +45,30 @@ h1, h2, h3 {
 }
 .btn:hover { background: #ff0000; box-shadow: 0 0 20px #ff0000; }
 
+/* ABOUT */
 .about-main { display: flex; gap: 50px; align-items: flex-start; margin-bottom: 80px; text-align: left; }
 .about-text { flex: 2; }
 .about-images { flex: 1; display: flex; flex-direction: column; gap: 20px; }
-.side-img { width: 100%; border-radius: 10px; border: 1px solid #333; }
+.side-img { width: 100%; border-radius: 5px; border: 1px solid #333; }
 
 .reading-now { display: flex; gap: 40px; align-items: center; border-top: 1px solid #1a1a1a; padding-top: 50px; text-align: left; }
 .book-grid { display: flex; gap: 15px; }
-.book-cover { width: 80px; height: 120px; border-radius: 3px; border: 1px solid #222; }
+.book-cover { width: 80px; height: 120px; border: 1px solid #222; }
 
+/* PROJECTS */
 .filter-tabs { margin: 40px 0; display: flex; justify-content: center; gap: 25px; }
-.tab-btn { background: transparent; color: #444; border: none; font-size: 1.1rem; cursor: pointer; font-weight: bold; }
+.tab-btn { background: transparent; color: #444; border: none; font-size: 1.1rem; cursor: pointer; font-weight: bold; transition: 0.3s; }
 .tab-btn.active { color: #ff0000; border-bottom: 2px solid #ff0000; }
 
-.project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-.project-card { background: #0f0f0f; border: 1px solid #1a1a1a; padding: 20px; border-radius: 5px; transition: 0.3s; }
-.project-card:hover { border-color: #ff0000; }
+.project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+.project-card { background: #0f0f0f; border: 1px solid #1a1a1a; border-radius: 8px; overflow: hidden; transition: 0.4s; }
+.project-card:hover { border-color: #ff0000; transform: translateY(-5px); }
+.project-img { height: 200px; background-size: cover; background-position: center; background-color: #1a1a1a; }
+.project-info { padding: 25px; text-align: left; }
+.project-info h3 { font-size: 1.2rem; margin-bottom: 10px; }
+.project-info p { font-size: 0.9rem; color: #888; margin-bottom: 20px; }
 .project-link { color: #ff0000; text-decoration: none; font-weight: bold; text-transform: uppercase; font-size: 0.8rem; }
+
+footer .contact-links { display: flex; justify-content: center; gap: 30px; margin: 30px 0; }
+footer a { color: #fff; text-decoration: none; border-bottom: 1px solid #ff0000; padding-bottom: 4px; }
+.copyright { color: #333; font-size: 0.8rem; margin-top: 30px; text-align: center; }
