@@ -1,25 +1,20 @@
-function filterProjects(category) {
-    const cards = document.querySelectorAll('.project-card');
-    const buttons = document.querySelectorAll('.tab-btn');
+/* ABOUT SECTION LAYOUT */
+.about-main { display: flex; gap: 40px; align-items: center; margin-bottom: 60px; text-align: left; }
+.about-text { flex: 2; }
+.about-images { flex: 1; display: flex; flex-direction: column; gap: 15px; }
+.side-img { width: 100%; border-radius: 12px; border: 1px solid #2a2a2a; }
 
-    // Update active button state
-    buttons.forEach(btn => btn.classList.remove('active'));
-    event.target.classList.add('active');
+/* READING SECTION */
+.reading-now { display: flex; gap: 40px; align-items: center; border-top: 1px solid #222; padding-top: 40px; text-align: left; }
+.reading-info { flex: 1; }
+.book-grid { flex: 1; display: flex; gap: 15px; justify-content: center; }
+.book-cover { width: 80px; height: 120px; object-fit: cover; border-radius: 4px; box-shadow: 0 5px 15px rgba(0,0,0,0.5); transition: 0.3s; }
+.book-cover:hover { transform: scale(1.1); }
 
-    // Show/Hide cards
-    cards.forEach(card => {
-        if (card.classList.contains(category)) {
-            card.style.display = "block";
-            // Add a small fade-in effect
-            card.style.opacity = "0";
-            setTimeout(() => card.style.opacity = "1", 10);
-        } else {
-            card.style.display = "none";
-        }
-    });
-}
+/* TAB STYLING */
+.filter-tabs { margin-bottom: 40px; display: flex; justify-content: center; gap: 20px; }
+.tab-btn { background: transparent; color: #666; border: none; font-size: 1.1rem; cursor: pointer; padding: 10px 20px; transition: 0.3s; font-weight: bold; }
+.tab-btn.active { color: #d4a373; border-bottom: 2px solid #d4a373; }
 
-// Initialize to show only Option 1 on load
-document.addEventListener('DOMContentLoaded', () => {
-    filterProjects('opt1'); 
-});
+/* SMOOTH FADE FOR CARDS */
+.project-card { transition: opacity 0.4s ease, transform 0.3s ease; }
