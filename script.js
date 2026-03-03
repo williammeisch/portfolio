@@ -23,3 +23,4 @@ function filterProjects(category) {
 document.addEventListener('DOMContentLoaded', () => {
     filterProjects('opt1'); 
 });
+
