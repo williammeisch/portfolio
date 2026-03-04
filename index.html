@@ -1,44 +1,104 @@
-<section id="about" class="section">
-    <div class="container">
-        <h2>About Me</h2>
-        <div class="underline"></div>
-        
-        <div class="about-grid">
-            <div class="about-row">
-                <div class="about-text-box">
-                    <p>Insert your first paragraph here. Establish your identity as a marketer with a developer's precision. Keep it punchy and professional.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>William Meisch | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header class="hero" id="particles-js">
+        <div class="container hero-content">
+            <h1>William Meisch</h1>
+            <p>Marketer &bull; Developer &bull; Designer</p>
+            <a href="#about" class="btn">About Me</a>
+        </div>
+    </header>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="underline"></div>
+            
+            <div class="about-grid">
+                <div class="about-row">
+                    <div class="about-text-box">
+                        <p>I bridge the gap between high-level marketing strategy and technical execution. My approach is rooted in the belief that performance and aesthetics aren't mutually exclusive—they are the twin engines of a premium digital experience.</p>
+                    </div>
+                    <div class="about-shape-box">
+                        <div class="shape sharp-poly-1"></div>
+                    </div>
                 </div>
-                <div class="about-shape-box">
-                    <div class="shape sharp-poly-1"></div>
+
+                <div class="about-row reverse">
+                    <div class="about-shape-box">
+                        <div class="shape sharp-poly-2"></div>
+                    </div>
+                    <div class="about-text-box">
+                        <p>With a focus on clean code and sharp design, I build tools that don't just function—they command attention. From data-driven trackers to sleek brand portfolios, every project is an exercise in precision.</p>
+                    </div>
+                </div>
+
+                <div class="about-row">
+                    <div class="about-text-box">
+                        <p>Based on the fast-paced energy of modern digital landscapes, I thrive on solving complex problems with "Vegas-speed" efficiency. Let's build something that sets a new standard for your brand.</p>
+                    </div>
+                    <div class="about-shape-box">
+                        <div class="shape sharp-poly-3"></div>
+                    </div>
                 </div>
             </div>
 
-            <div class="about-row reverse">
-                <div class="about-shape-box">
-                    <div class="shape sharp-poly-2"></div>
-                </div>
-                <div class="about-text-box">
-                    <p>Insert your second paragraph here. This is the technical core. Talk about the "Vegas" speed and reliability you build into your code and designs.</p>
-                </div>
-            </div>
-
-            <div class="about-row">
-                <div class="about-text-box">
-                    <p>Insert your third paragraph here. The "Closer." Talk about your vision for the future and how you bridge the gap between aesthetics and performance.</p>
-                </div>
-                <div class="about-shape-box">
-                    <div class="shape sharp-poly-3"></div>
+            <div class="reading-now-sleek">
+                <h3>What I'm Reading</h3>
+                <div class="book-row">
+                    <img src="images/book1.jpg" alt="Book 1" class="book-vibe">
+                    <img src="images/book2.jpg" alt="Book 2" class="book-vibe">
+                    <img src="images/book3.jpg" alt="Book 3" class="book-vibe">
                 </div>
             </div>
         </div>
+    </section>
 
-        <div class="reading-now-sleek">
-            <h3>What I'm Reading</h3>
-            <div class="book-row">
-                <img src="images/book1.jpg" alt="Book 1" class="book-vibe">
-                <img src="images/book2.jpg" alt="Book 2" class="book-vibe">
-                <img src="images/book3.jpg" alt="Book 3" class="book-vibe">
+    <section id="projects" class="section bg-alt">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="underline"></div>
+            
+            <div class="filter-tabs">
+                <button class="tab-btn active" onclick="filterProjects('opt1', event)">Option 1</button>
+                <button class="tab-btn" onclick="filterProjects('opt2', event)">Option 2</button>
+                <button class="tab-btn" onclick="filterProjects('opt3', event)">Option 3</button>
             </div>
+
+            <div class="project-grid" id="projectGrid">
+                <div class="project-card opt1">
+                    <div class="project-img" style="background-image: url('images/recovery.jpg');"></div>
+                    <div class="project-info">
+                        <h3>Recovery Tracker Pro</h3>
+                        <p>High-performance caffeine and physiological data dashboard.</p>
+                        <a href="#" class="project-link">View Project &rarr;</a>
+                    </div>
+                </div>
+                </div>
         </div>
-    </div>
-</section>
+    </section>
+
+    <footer id="contact" class="section">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <div class="underline"></div>
+            <div class="contact-links">
+                <a href="mailto:your@email.com">Email</a>
+                <a href="#">GitHub</a>
+                <a href="#">LinkedIn</a>
+            </div>
+            <p class="copyright">&copy; 2026 William Meisch</p>
+        </div>
+    </footer>
+
+</body>
+</html>
