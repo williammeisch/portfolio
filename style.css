@@ -1,48 +1,107 @@
-/* ASYMMETRICAL GRID */
+/* GLOBAL THEME */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+html { scroll-behavior: smooth; }
+body { background: #050505; color: #e0e0e0; line-height: 1.6; overflow-x: hidden; }
+
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+.section { padding: 100px 0; }
+.bg-alt { background: #0a0a0a; border-top: 1px solid #1a1a1a; border-bottom: 1px solid #1a1a1a; }
+
+/* SILVER METALLIC TITLES */
+h1, h2, h3 { 
+    background: linear-gradient(180deg, #ffffff 0%, #a1a1a1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.underline { width: 60px; height: 3px; background: #ff0000; margin: 15px 0 30px; box-shadow: 0 0 10px #ff0000; }
+
+/* HERO & EMBERS */
+.hero { 
+    height: 100vh; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center;
+    background: #050505;
+    position: relative;
+    overflow: hidden; 
+}
+.hero-content { z-index: 10; position: relative; }
+.hero-content h1 { font-size: clamp(3rem, 10vw, 5rem); font-weight: 900; margin-bottom: 10px; }
+.hero-content p { font-size: 1.1rem; color: #888; text-transform: uppercase; letter-spacing: 5px; margin-bottom: 40px; }
+
+/* VEGAS RED BUTTON */
+.btn { 
+    padding: 15px 40px; 
+    border: 1px solid #ff0000; 
+    color: #fff; 
+    background: rgba(255, 0, 0, 0.05);
+    text-decoration: none; 
+    font-weight: bold; 
+    border-radius: 2px; 
+    transition: 0.5s;
+    letter-spacing: 2px;
+}
+.btn:hover { background: #ff0000; box-shadow: 0 0 20px #ff0000; color: #fff; }
+
+/* ASYMMETRICAL ABOUT GRID */
 .about-grid { display: flex; flex-direction: column; gap: 80px; margin-top: 50px; }
 .about-row { display: flex; align-items: center; gap: 40px; }
 .about-row.reverse { flex-direction: row-reverse; }
 
-.about-text-box { flex: 1; padding: 20px; }
+.about-text-box { flex: 1.2; padding: 20px; text-align: left; }
 .about-text-box p { font-size: 1.15rem; color: #ccc; line-height: 1.8; border-left: 1px solid #ff0000; padding-left: 20px; }
 
-.about-shape-box { flex: 1; display: flex; justify-content: center; align-items: center; position: relative; }
+.about-shape-box { flex: 1; display: flex; justify-content: center; align-items: center; }
 
 /* SHARP GEOMETRIC SHAPES */
 .shape { 
-    width: 250px; 
-    height: 250px; 
-    background: linear-gradient(45deg, #1a1a1a, #333); 
-    border: 1px solid #444;
-    position: relative;
-    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%); /* Abstract Pentagram */
-    transition: 0.6s;
+    width: 280px; 
+    height: 280px; 
+    background: linear-gradient(45deg, #111, #222); 
+    border: 1px solid #333;
+    transition: 0.6s ease-in-out;
 }
-
-.sharp-poly-1 { clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%); background: linear-gradient(45deg, #222, #ff000033); }
+.sharp-poly-1 { clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%); background: linear-gradient(45deg, #111, #ff000022); }
 .sharp-poly-2 { clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); border-right: 3px solid #ff0000; }
-.sharp-poly-3 { clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%); background: #111; border: 1px solid #ff0000; }
+.sharp-poly-3 { clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%); border: 1px solid #ff0000; }
 
-.shape:hover { transform: rotate(5deg) scale(1.05); border-color: #ff0000; box-shadow: 0 0 20px #ff0000; }
+.shape:hover { transform: rotate(8deg) scale(1.05); border-color: #ff0000; box-shadow: 0 0 30px rgba(255, 0, 0, 0.2); }
 
-/* PROJECT CARD OVERHAUL (Sleeker Version) */
-.project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
-.project-card { 
-    background: #080808; 
-    border: 1px solid #1a1a1a; 
-    padding: 0; 
-    border-radius: 0; /* Sharp corners for Vegas look */
-    position: relative;
-}
-.project-card::before { 
-    content: ""; position: absolute; top: 0; left: 0; width: 0; height: 2px; background: #ff0000; transition: 0.4s; 
-}
-.project-card:hover::before { width: 100%; }
-.project-info { padding: 30px; }
-.project-info h3 { font-size: 1.4rem; letter-spacing: 1px; }
-
-/* READING SLEEK */
-.reading-now-sleek { margin-top: 100px; text-align: center; border-top: 1px solid #1a1a1a; padding-top: 50px; }
-.book-row { display: flex; justify-content: center; gap: 30px; margin-top: 30px; }
-.book-vibe { width: 120px; height: 180px; filter: grayscale(100%) contrast(1.2); transition: 0.4s; border: 1px solid #222; }
+/* READING SECTION */
+.reading-now-sleek { margin-top: 100px; text-align: center; border-top: 1px solid #1a1a1a; padding-top: 60px; }
+.book-row { display: flex; justify-content: center; gap: 30px; margin-top: 40px; flex-wrap: wrap; }
+.book-vibe { width: 120px; height: 180px; filter: grayscale(100%); transition: 0.4s; border: 1px solid #222; object-fit: cover; }
 .book-vibe:hover { filter: grayscale(0%); transform: translateY(-10px); border-color: #ff0000; }
+
+/* PROJECTS */
+.filter-tabs { margin: 40px 0; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+.tab-btn { background: transparent; color: #444; border: none; font-size: 1.1rem; cursor: pointer; font-weight: bold; padding: 10px; transition: 0.3s; }
+.tab-btn.active { color: #ff0000; border-bottom: 2px solid #ff0000; }
+
+.project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; margin-top: 40px; }
+.project-card { background: #080808; border: 1px solid #1a1a1a; transition: 0.4s; position: relative; overflow: hidden; }
+.project-card:hover { border-color: #ff0000; transform: translateY(-5px); }
+.project-card::before { content: ""; position: absolute; top: 0; left: 0; width: 0; height: 2px; background: #ff0000; transition: 0.4s; }
+.project-card:hover::before { width: 100%; }
+
+.project-img { height: 220px; background-size: cover; background-position: center; background-color: #111; }
+.project-info { padding: 30px; text-align: left; }
+.project-info p { color: #888; font-size: 0.95rem; margin: 10px 0 20px; }
+.project-link { color: #ff0000; text-decoration: none; font-weight: bold; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; }
+
+/* FOOTER */
+.contact-links { display: flex; justify-content: center; gap: 40px; margin: 40px 0; }
+.contact-links a { color: #fff; text-decoration: none; border-bottom: 1px solid #ff0000; padding-bottom: 5px; transition: 0.3s; }
+.contact-links a:hover { color: #ff0000; }
+.copyright { color: #333; font-size: 0.85rem; text-align: center; margin-top: 40px; }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .about-row, .about-row.reverse { flex-direction: column; text-align: center; }
+    .about-text-box p { border-left: none; border-top: 1px solid #ff0000; padding: 20px 0 0 0; }
+    .hero-content h1 { font-size: 3.5rem; }
+}
