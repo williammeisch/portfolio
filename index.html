@@ -3,89 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>William - Marketer, Developer, Designer</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>William Meisch | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <!-- Animated Background Canvas -->
-    <canvas id="emberCanvas"></canvas>
 
-    <!-- Header Section -->
-    <header id="header" class="header">
-        <div class="header-content">
-            <h1 class="name">William</h1>
-            <p class="tagline">Marketer <span class="separator">•</span> Developer <span class="separator">•</span> Designer</p>
-            <button class="cta-button" onclick="scrollToSection('about')">About Me</button>
+    <header class="hero" id="particles-js">
+        <div class="container hero-content">
+            <h1>William Meisch</h1>
+            <p>Marketer &bull; Developer &bull; Designer</p>
+            <a href="#about" class="btn">About Me</a>
         </div>
     </header>
 
-    <!-- About Me Section -->
-    <section id="about" class="about">
+    <section id="about" class="section">
         <div class="container">
-            <h2>About Me</h2>
-            <div class="about-content">
-                <p>
-                    I'm a creative professional who thrives at the intersection of marketing, development, and design. With a passion for crafting digital experiences that resonate, I combine strategic thinking with technical expertise to bring ideas to life. Whether it's building robust applications, designing intuitive interfaces, or developing marketing strategies that drive results, I'm committed to excellence in every project.
-                </p>
-                <p>
-                    My approach is collaborative and detail-oriented. I believe the best solutions come from understanding the problem deeply, iterating based on feedback, and never settling for good when great is possible. I'm constantly learning, exploring new technologies, and pushing the boundaries of what's possible in the digital space.
-                </p>
-                <p>
-                    When I'm not building or designing, you can find me exploring the latest trends in tech, mentoring aspiring developers, or working on side projects that challenge me to grow. I'm always excited to connect with like-minded professionals and discuss how we can create something remarkable together.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2>Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image" style="background: linear-gradient(135deg, #ff1744, #d32f2f);"></div>
-                    <h3>E-Commerce Platform</h3>
-                    <p>A full-stack e-commerce solution with payment integration, inventory management, and real-time analytics.</p>
-                    <button class="view-project-btn" onclick="window.open('#project1', '_blank')">View Project</button>
+            <h2 class="section-title">Identity</h2>
+            <div class="underline"></div>
+            
+            <div class="about-stack">
+                <div class="about-row">
+                    <div class="about-text">
+                        <h3>Strategy</h3>
+                        <p>I bridge the gap between high-level marketing strategy and technical execution. My approach is rooted in the belief that performance and aesthetics aren't mutually exclusive—they are the twin engines of a premium digital experience.</p>
+                    </div>
+                    <div class="about-visual">
+                        <div class="shard shard-1"></div>
+                    </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-image" style="background: linear-gradient(135deg, #c41c3b, #8b0000);"></div>
-                    <h3>Marketing Dashboard</h3>
-                    <p>Interactive dashboard for campaign tracking and performance metrics with beautiful data visualizations.</p>
-                    <button class="view-project-btn" onclick="window.open('#project2', '_blank')">View Project</button>
+                <div class="about-row inverse">
+                    <div class="about-visual">
+                        <div class="shard shard-2"></div>
+                    </div>
+                    <div class="about-text">
+                        <h3>Execution</h3>
+                        <p>With a focus on clean code and sharp design, I build tools that don't just function—they command attention. From data-driven trackers to sleek brand portfolios, every project is an exercise in precision.</p>
+                    </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-image" style="background: linear-gradient(135deg, #b71c1c, #660000);"></div>
-                    <h3>Mobile App Design</h3>
-                    <p>UI/UX design for a social networking app featuring intuitive navigation and engaging visual design.</p>
-                    <button class="view-project-btn" onclick="window.open('#project3', '_blank')">View Project</button>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image" style="background: linear-gradient(135deg, #a71930, #550011);"></div>
-                    <h3>Brand Identity System</h3>
-                    <p>Comprehensive branding package including logo design, color palette, typography, and brand guidelines.</p>
-                    <button class="view-project-btn" onclick="window.open('#project4', '_blank')">View Project</button>
+                <div class="about-row">
+                    <div class="about-text">
+                        <h3>Vision</h3>
+                        <p>Based on the fast-paced energy of modern digital landscapes, I thrive on solving complex problems with "Vegas-speed" efficiency. Let's build something that sets a new standard for your brand.</p>
+                    </div>
+                    <div class="about-visual">
+                        <div class="shard shard-3"></div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <section id="projects" class="section bg-darker">
+        <div class="container">
+            <h2 class="section-title">The Gallery</h2>
+            <div class="underline"></div>
+            
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="card-edge"></div>
+                    <div class="project-info">
+                        <span>01</span>
+                        <h3>Recovery Tracker</h3>
+                        <p>High-performance caffeine and physiological data dashboard.</p>
+                        <a href="#" class="view-link">Launch Project &rarr;</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="card-edge"></div>
+                    <div class="project-info">
+                        <span>02</span>
+                        <h3>Marketing Engine</h3>
+                        <p>Automated conversion funnels built with modern web stacks.</p>
+                        <a href="#" class="view-link">Launch Project &rarr;</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="card-edge"></div>
+                    <div class="project-info">
+                        <span>03</span>
+                        <h3>Brand Identity</h3>
+                        <p>High-end UI/UX design concepts for luxury tech brands.</p>
+                        <a href="#" class="view-link">Launch Project &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
         <div class="container">
             <h2>Get In Touch</h2>
-            <p class="contact-text">Let's create something amazing together</p>
-            <div class="contact-links">
-                <a href="mailto:william@example.com" class="contact-link">Email</a>
-                <a href="https://linkedin.com" class="contact-link">LinkedIn</a>
-                <a href="https://github.com" class="contact-link">GitHub</a>
+            <div class="underline"></div>
+            <div class="contact-box">
+                <a href="mailto:william@example.com">Email</a>
+                <a href="#">GitHub</a>
+                <a href="#">LinkedIn</a>
             </div>
+            <p class="copyright">&copy; 2026 William Meisch</p>
         </div>
-    </section>
+    </footer>
 
-    <script src="script.js"></script>
 </body>
 </html>
