@@ -1,91 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>William | Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>William Meisch | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
 
-  <!-- HERO SECTION -->
-  <section class="hero">
-    <h1 class="neon-text">William</h1>
-    <p class="subtitle">Marketer • Developer • Designer</p>
-    <button class="neon-btn" onclick="scrollToAbout()">About Me</button>
-  </section>
+    <header class="hero" id="particles-js">
+        <div class="container hero-content">
+            <h1>William Meisch</h1>
+            <p>Marketer &bull; Developer &bull; Designer</p>
+            <a href="#about" class="btn">About Me</a>
+        </div>
+    </header>
 
-  <!-- ABOUT SECTION -->
-  <section id="about" class="about">
-    <h2 class="section-title">About Me</h2>
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">Identity</h2>
+            <div class="underline"></div>
+            
+            <div class="about-stack">
+                <div class="about-row">
+                    <div class="about-text">
+                        <h3>Strategy</h3>
+                        <p>I specialize in high-stakes digital marketing where precision meets performance. Every line of code I write is designed to convert, and every design is built to command attention.</p>
+                    </div>
+                    <div class="about-visual">
+                        <div class="shard shard-1"></div>
+                    </div>
+                </div>
 
-    <div class="about-grid">
-      <div class="about-card card-1">
-        <p>
-          I blend creativity and systems thinking to build experiences that feel intentional,
-          powerful, and clean. My work sits at the intersection of design, code, and strategy.
-        </p>
-      </div>
+                <div class="about-row inverse">
+                    <div class="about-visual">
+                        <div class="shard shard-2"></div>
+                    </div>
+                    <div class="about-text">
+                        <h3>Execution</h3>
+                        <p>Bridging the gap between a marketer's vision and a developer's reality. I build sleek, fast-loading interfaces that maintain luxury aesthetics without sacrificing technical depth.</p>
+                    </div>
+                </div>
 
-      <div class="about-card card-2">
-        <p>
-          I’m drawn to bold aesthetics and refined structure. Whether it's branding,
-          UX design, or development, I aim for precision with personality.
-        </p>
-      </div>
+                <div class="about-row">
+                    <div class="about-text">
+                        <h3>Vision</h3>
+                        <p>Based in the fast-moving digital world, I thrive on the "Vegas Speed" of innovation. My work is defined by sharp edges, neon accents, and a relentless focus on the end-user experience.</p>
+                    </div>
+                    <div class="about-visual">
+                        <div class="shard shard-3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      <div class="about-card card-3">
-        <p>
-          My focus is growth — for businesses, products, and myself.
-          Every project is a step toward mastery in design and digital systems.
-        </p>
-      </div>
-    </div>
+    <section id="projects" class="section bg-darker">
+        <div class="container">
+            <h2 class="section-title">The Gallery</h2>
+            <div class="underline"></div>
+            
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="card-edge"></div>
+                    <div class="project-info">
+                        <span>01</span>
+                        <h3>Recovery Tracker</h3>
+                        <p>A sophisticated dashboard for physiological data tracking.</p>
+                        <a href="#" class="view-link">Launch Project &rarr;</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="card-edge"></div>
+                    <div class="project-info">
+                        <span>02</span>
+                        <h3>Marketing Engine</h3>
+                        <p>Automated conversion funnels built with modern web stacks.</p>
+                        <a href="#" class="view-link">Launch Project &rarr;</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="card-edge"></div>
+                    <div class="project-info">
+                        <span>03</span>
+                        <h3>Brand Identity</h3>
+                        <p>High-end UI/UX design concepts for luxury tech brands.</p>
+                        <a href="#" class="view-link">Launch Project &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <ul class="fun-facts">
-      <li>⚡ Obsessed with clean UI & bold branding</li>
-      <li>🎲 Inspired by high-contrast, high-energy environments</li>
-      <li>🚀 Always building something new</li>
-    </ul>
-  </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="contact-box">
+                <a href="mailto:william@example.com">Email</a>
+                <a href="#">GitHub</a>
+                <a href="#">LinkedIn</a>
+            </div>
+            <p>&copy; 2026 William Meisch</p>
+        </div>
+    </footer>
 
-  <!-- PROJECTS SECTION -->
-  <section class="projects">
-    <h2 class="section-title">Projects</h2>
-
-    <div class="project-grid">
-
-      <div class="project-card">
-        <div class="project-image"></div>
-        <h3>Project One</h3>
-        <p>Short description of what this project does and why it matters.</p>
-        <a href="#" class="card-btn">View Project</a>
-      </div>
-
-      <div class="project-card">
-        <div class="project-image"></div>
-        <h3>Project Two</h3>
-        <p>Short description of what this project does and why it matters.</p>
-        <a href="#" class="card-btn">View Project</a>
-      </div>
-
-      <div class="project-card">
-        <div class="project-image"></div>
-        <h3>Project Three</h3>
-        <p>Short description of what this project does and why it matters.</p>
-        <a href="#" class="card-btn">View Project</a>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- CONTACT SECTION -->
-  <section class="contact">
-    <h2>Contact</h2>
-    <p>Let’s build something bold.</p>
-    <a href="mailto:youremail@email.com" class="neon-btn">Email Me</a>
-  </section>
-
-  <script src="script.js"></script>
 </body>
 </html>
