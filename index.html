@@ -1,104 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>William Meisch | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-    <script src="script.js" defer></script>
+  <meta charset="UTF-8">
+  <title>William | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="hero" id="particles-js">
-        <div class="container hero-content">
-            <h1>William Meisch</h1>
-            <p>Marketer &bull; Developer &bull; Designer</p>
-            <a href="#about" class="btn">About Me</a>
-        </div>
-    </header>
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <h1 class="neon-text">William</h1>
+    <p class="subtitle">Marketer • Developer • Designer</p>
+    <button class="neon-btn" onclick="scrollToAbout()">About Me</button>
+  </section>
 
-    <section id="about" class="section">
-        <div class="container">
-            <h2>About Me</h2>
-            <div class="underline"></div>
-            
-            <div class="about-grid">
-                <div class="about-row">
-                    <div class="about-text-box">
-                        <p>I bridge the gap between high-level marketing strategy and technical execution. My approach is rooted in the belief that performance and aesthetics aren't mutually exclusive—they are the twin engines of a premium digital experience.</p>
-                    </div>
-                    <div class="about-shape-box">
-                        <div class="shape sharp-poly-1"></div>
-                    </div>
-                </div>
+  <!-- ABOUT SECTION -->
+  <section id="about" class="about">
+    <h2 class="section-title">About Me</h2>
 
-                <div class="about-row reverse">
-                    <div class="about-shape-box">
-                        <div class="shape sharp-poly-2"></div>
-                    </div>
-                    <div class="about-text-box">
-                        <p>With a focus on clean code and sharp design, I build tools that don't just function—they command attention. From data-driven trackers to sleek brand portfolios, every project is an exercise in precision.</p>
-                    </div>
-                </div>
+    <div class="about-grid">
+      <div class="about-card card-1">
+        <p>
+          I blend creativity and systems thinking to build experiences that feel intentional,
+          powerful, and clean. My work sits at the intersection of design, code, and strategy.
+        </p>
+      </div>
 
-                <div class="about-row">
-                    <div class="about-text-box">
-                        <p>Based on the fast-paced energy of modern digital landscapes, I thrive on solving complex problems with "Vegas-speed" efficiency. Let's build something that sets a new standard for your brand.</p>
-                    </div>
-                    <div class="about-shape-box">
-                        <div class="shape sharp-poly-3"></div>
-                    </div>
-                </div>
-            </div>
+      <div class="about-card card-2">
+        <p>
+          I’m drawn to bold aesthetics and refined structure. Whether it's branding,
+          UX design, or development, I aim for precision with personality.
+        </p>
+      </div>
 
-            <div class="reading-now-sleek">
-                <h3>What I'm Reading</h3>
-                <div class="book-row">
-                    <img src="images/book1.jpg" alt="Book 1" class="book-vibe">
-                    <img src="images/book2.jpg" alt="Book 2" class="book-vibe">
-                    <img src="images/book3.jpg" alt="Book 3" class="book-vibe">
-                </div>
-            </div>
-        </div>
-    </section>
+      <div class="about-card card-3">
+        <p>
+          My focus is growth — for businesses, products, and myself.
+          Every project is a step toward mastery in design and digital systems.
+        </p>
+      </div>
+    </div>
 
-    <section id="projects" class="section bg-alt">
-        <div class="container">
-            <h2>Projects</h2>
-            <div class="underline"></div>
-            
-            <div class="filter-tabs">
-                <button class="tab-btn active" onclick="filterProjects('opt1', event)">Option 1</button>
-                <button class="tab-btn" onclick="filterProjects('opt2', event)">Option 2</button>
-                <button class="tab-btn" onclick="filterProjects('opt3', event)">Option 3</button>
-            </div>
+    <ul class="fun-facts">
+      <li>⚡ Obsessed with clean UI & bold branding</li>
+      <li>🎲 Inspired by high-contrast, high-energy environments</li>
+      <li>🚀 Always building something new</li>
+    </ul>
+  </section>
 
-            <div class="project-grid" id="projectGrid">
-                <div class="project-card opt1">
-                    <div class="project-img" style="background-image: url('images/recovery.jpg');"></div>
-                    <div class="project-info">
-                        <h3>Recovery Tracker Pro</h3>
-                        <p>High-performance caffeine and physiological data dashboard.</p>
-                        <a href="#" class="project-link">View Project &rarr;</a>
-                    </div>
-                </div>
-                </div>
-        </div>
-    </section>
+  <!-- PROJECTS SECTION -->
+  <section class="projects">
+    <h2 class="section-title">Projects</h2>
 
-    <footer id="contact" class="section">
-        <div class="container">
-            <h2>Get In Touch</h2>
-            <div class="underline"></div>
-            <div class="contact-links">
-                <a href="mailto:your@email.com">Email</a>
-                <a href="#">GitHub</a>
-                <a href="#">LinkedIn</a>
-            </div>
-            <p class="copyright">&copy; 2026 William Meisch</p>
-        </div>
-    </footer>
+    <div class="project-grid">
 
+      <div class="project-card">
+        <div class="project-image"></div>
+        <h3>Project One</h3>
+        <p>Short description of what this project does and why it matters.</p>
+        <a href="#" class="card-btn">View Project</a>
+      </div>
+
+      <div class="project-card">
+        <div class="project-image"></div>
+        <h3>Project Two</h3>
+        <p>Short description of what this project does and why it matters.</p>
+        <a href="#" class="card-btn">View Project</a>
+      </div>
+
+      <div class="project-card">
+        <div class="project-image"></div>
+        <h3>Project Three</h3>
+        <p>Short description of what this project does and why it matters.</p>
+        <a href="#" class="card-btn">View Project</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact">
+    <h2>Contact</h2>
+    <p>Let’s build something bold.</p>
+    <a href="mailto:youremail@email.com" class="neon-btn">Email Me</a>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
