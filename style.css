@@ -18,18 +18,41 @@ h1, h2, h3 {
 
 .underline { width: 80px; height: 2px; background: #ff0000; margin: 20px 0 60px; box-shadow: 0 0 15px #ff0000; }
 
-/* HERO SECTION */
-.hero { height: 100vh; display: flex; align-items: center; justify-content: center; position: relative; }
-.hero-content { z-index: 5; text-align: center; }
-.hero h1 { font-size: clamp(3rem, 8vw, 6rem); font-weight: 900; }
-.hero p { color: #666; letter-spacing: 8px; margin-bottom: 40px; text-transform: uppercase; font-size: 0.9rem; }
-
-.btn { 
-    padding: 18px 45px; border: 1px solid #ff0000; color: #fff; text-decoration: none;
-    font-size: 0.8rem; letter-spacing: 3px; font-weight: bold; transition: 0.4s;
-    background: rgba(255,0,0,0.02);
+/* FIXED HERO SECTION */
+.hero { 
+    height: 100vh; 
+    width: 100%;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    position: relative; /* Allows absolute positioning inside */
+    overflow: hidden;
+    background: #050505;
 }
-.btn:hover { background: #ff0000; box-shadow: 0 0 30px rgba(255,0,0,0.4); }
+
+/* This forces the embers to cover the whole background without pushing text */
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Behind the text */
+}
+
+.hero-content { 
+    position: relative;
+    z-index: 10; /* Above the particles */
+    text-align: center;
+    width: 100%; /* Prevents text from being cut off */
+}
+
+.hero h1 { 
+    font-size: clamp(2.5rem, 8vw, 5.5rem); /* Scalable font to prevent overflow */
+    font-weight: 900; 
+    margin: 0;
+    white-space: nowrap; /* Keeps your name on one line unless it's a small phone */
+}
 
 /* UPDATED ABOUT SECTION */
 .about-stack { display: flex; flex-direction: column; gap: 120px; }
