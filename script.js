@@ -62,3 +62,32 @@ if (roleMoreToggle && roleMorePanel) {
     roleMoreToggle.textContent = isOpen ? 'More details ▾' : 'Hide details ▴';
   });
 }
+
+const rideAgainBtn = document.getElementById('ride-again-btn');
+
+if (rideAgainBtn) {
+  rideAgainBtn.addEventListener('click', () => {
+    if (rideAgainBtn.disabled) return;
+    rideAgainBtn.disabled = true;
+
+    const startRect = rideAgainBtn.getBoundingClientRect();
+    const cart = document.createElement('span');
+    cart.className = 'flying-cart';
+    cart.textContent = '🎢';
+    cart.style.left = `${startRect.left + (startRect.width * 0.25)}px`;
+    cart.style.top = `${startRect.top + 2}px`;
+    document.body.append(cart);
+
+    requestAnimationFrame(() => {
+      const rise = Math.max(40, startRect.top - 24);
+      cart.style.transform = `translate(110px, ${-rise}px)`;
+      cart.style.opacity = '0.4';
+    });
+
+    window.setTimeout(() => {
+      cart.remove();
+      document.getElementById('home')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      rideAgainBtn.disabled = false;
+    }, 1225);
+  });
+}
