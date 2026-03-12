@@ -249,12 +249,14 @@ h1 {
 
 .ace-back {
     transform: rotateY(180deg);
-    border: 1px solid rgba(167, 139, 250, 0.45);
+    border: 1px solid rgba(248, 113, 113, 0.56);
     background:
-        repeating-linear-gradient(45deg, rgba(79, 70, 229, 0.86) 0 12px, rgba(37, 99, 235, 0.86) 12px 24px),
-        radial-gradient(circle at 50% 40%, rgba(191, 219, 254, 0.22), transparent 55%);
-    box-shadow: inset 0 0 40px rgba(167, 139, 250, 0.2);
+        radial-gradient(circle at 70% 20%, rgba(252, 165, 165, 0.2), transparent 42%),
+        linear-gradient(165deg, rgba(127, 29, 29, 0.94), rgba(153, 27, 27, 0.9));
+    box-shadow: inset 0 0 34px rgba(252, 165, 165, 0.2), 0 10px 30px rgba(127, 29, 29, 0.45);
+    color: #ffe4e6;
 }
+
 
 .shape-shadow {
     position: absolute;
@@ -366,15 +368,9 @@ h2 {
     font-size: 0.95rem;
 }
 
-.timeline-group {
-    border: 1px solid rgba(129, 140, 248, 0.34);
-    background: linear-gradient(170deg, rgba(43, 46, 102, 0.25), rgba(20, 23, 54, 0.45));
-    border-radius: 18px;
-    padding: 0.85rem;
-}
-
-.blueforge-group .timeline-item {
-    background: rgba(18, 23, 50, 0.65);
+.timeline-item-related {
+    border-color: rgba(129, 140, 248, 0.38);
+    background: linear-gradient(170deg, rgba(43, 46, 102, 0.3), rgba(20, 23, 54, 0.58));
 }
 
 .timeline-connector {
