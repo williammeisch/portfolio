@@ -569,39 +569,16 @@ h2 {
 .footer-inner {
     padding: 2.4rem 0 2rem;
     display: grid;
-    gap: 1.1rem;
+    gap: 0.9rem;
     justify-items: center;
 }
 
-.footer-title {
-    color: var(--silver);
-    letter-spacing: 0.03em;
-    font-weight: 600;
-}
-
-.footer-ride {
-    width: min(420px, 94vw);
-    display: grid;
-    justify-items: center;
-    gap: 0.7rem;
-}
-
-.footer-track {
-    width: 92%;
-    height: 72px;
-    border-left: 2px solid rgba(56, 189, 248, 0.38);
-    border-top: 2px solid rgba(56, 189, 248, 0.38);
-    border-top-left-radius: 14px;
-    transform: skewX(-14deg);
-    box-shadow: 0 0 16px rgba(56, 189, 248, 0.15);
-}
-
-.footer-cart {
-    justify-self: start;
-    margin-left: 3%;
-    margin-top: -14px;
-    font-size: 1.15rem;
-    filter: drop-shadow(0 0 8px rgba(167, 139, 250, 0.6));
+.footer-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .footer-ride-btn {
@@ -616,6 +593,11 @@ h2 {
 
 .footer-ride-btn:hover {
     background: rgba(124, 58, 237, 0.28);
+}
+
+.footer-ride-btn:disabled {
+    opacity: 0.75;
+    cursor: default;
 }
 
 .flying-cart {
@@ -683,7 +665,7 @@ h2 {
         grid-template-columns: 1fr;
     }
 
-    .footer-track {
-        height: 60px;
+    .footer-actions {
+        width: 100%;
     }
 }
