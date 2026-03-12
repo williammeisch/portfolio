@@ -520,24 +520,6 @@ h2 {
     overflow: hidden;
 }
 
-.gallery-card-link {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-.gallery-card-link:hover {
-    transform: translateY(-3px);
-    border-color: rgba(56, 189, 248, 0.44);
-    box-shadow: 0 16px 34px rgba(4, 12, 28, 0.45);
-}
-
-.gallery-card-link:focus-visible {
-    outline: 2px solid rgba(56, 189, 248, 0.85);
-    outline-offset: 2px;
-}
-
 .gallery-card img {
     width: 100%;
     height: 200px;
@@ -555,8 +537,9 @@ h2 {
     margin: 0 0 0.9rem;
 }
 
-.gallery-cta {
+.gallery-body a {
     color: var(--red);
+    text-decoration: none;
     font-weight: 600;
     font-size: 0.95rem;
 }
