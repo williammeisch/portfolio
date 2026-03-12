@@ -40,6 +40,14 @@ if (tiltShape) {
     tiltShape.style.setProperty('--tilt-y', '14deg');
     tiltShape.style.setProperty('--flip-y', '0deg');
   });
+
+  tiltShape.addEventListener('click', () => {
+    const isFlipped = tiltShape.dataset.flipped === 'true';
+    const nextFlipped = !isFlipped;
+    tiltShape.dataset.flipped = String(nextFlipped);
+    tiltShape.style.setProperty('--click-flip', nextFlipped ? '180deg' : '0deg');
+    tiltShape.closest('.hero-shape')?.classList.toggle('hero-shape-red-bg', nextFlipped);
+  });
 }
 
 
