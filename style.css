@@ -561,6 +561,93 @@ h2 {
     font-size: 0.95rem;
 }
 
+.site-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    background: linear-gradient(180deg, rgba(9, 10, 16, 0.9), rgba(6, 7, 12, 0.96));
+}
+
+.footer-inner {
+    padding: 2.4rem 0 2rem;
+    display: grid;
+    gap: 1.1rem;
+    justify-items: center;
+}
+
+.footer-title {
+    color: var(--silver);
+    letter-spacing: 0.03em;
+    font-weight: 600;
+}
+
+.footer-ride {
+    width: min(420px, 94vw);
+    display: grid;
+    justify-items: center;
+    gap: 0.7rem;
+}
+
+.footer-track {
+    width: 92%;
+    height: 72px;
+    border-left: 2px solid rgba(56, 189, 248, 0.38);
+    border-top: 2px solid rgba(56, 189, 248, 0.38);
+    border-top-left-radius: 14px;
+    transform: skewX(-14deg);
+    box-shadow: 0 0 16px rgba(56, 189, 248, 0.15);
+}
+
+.footer-cart {
+    justify-self: start;
+    margin-left: 3%;
+    margin-top: -14px;
+    font-size: 1.15rem;
+    filter: drop-shadow(0 0 8px rgba(167, 139, 250, 0.6));
+}
+
+.footer-ride-btn {
+    border: 1px solid rgba(167, 139, 250, 0.45);
+    background: rgba(124, 58, 237, 0.18);
+    color: var(--text);
+    border-radius: 999px;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.footer-ride-btn:hover {
+    background: rgba(124, 58, 237, 0.28);
+}
+
+.flying-cart {
+    position: fixed;
+    z-index: 999;
+    font-size: 1.15rem;
+    line-height: 1;
+    pointer-events: none;
+    will-change: transform, opacity;
+    text-shadow: 0 0 12px rgba(56, 189, 248, 0.9), 0 0 20px rgba(167, 139, 250, 0.7);
+    transition: transform 1.2s cubic-bezier(0.2, 0.82, 0.24, 1), opacity 1.2s ease;
+}
+
+.footer-linkedin {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    color: #dbeafe;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.45rem 0.8rem;
+    border: 1px solid rgba(56, 189, 248, 0.32);
+    border-radius: 999px;
+    background: rgba(56, 189, 248, 0.12);
+}
+
+.footer-linkedin svg {
+    width: 1rem;
+    height: 1rem;
+    fill: currentColor;
+}
+
 @keyframes float-card {
     0%, 100% { transform: rotateY(calc(var(--flip-y) + var(--click-flip))) translateY(0); }
     50% { transform: rotateY(calc(var(--flip-y) + var(--click-flip) + 3deg)) translateY(-10px); }
@@ -594,5 +681,9 @@ h2 {
     .quote-grid,
     .inline-highlights {
         grid-template-columns: 1fr;
+    }
+
+    .footer-track {
+        height: 60px;
     }
 }
