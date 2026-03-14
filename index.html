@@ -4,102 +4,253 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>William Meisch | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="script.js" defer></script>
 </head>
 <body>
+    <div class="page-bg"></div>
 
-    <header class="hero">
-        <div id="particles-js"></div>
-        <div class="container hero-content">
-            <p class="hero-pre">Hi there,</p>
-            <h1>I'm William Meisch</h1>
-            <p class="hero-sub">And I'm a <span class="accent-text">Builder</span></p>
-            <div class="hero-btns">
-                <a href="mailto:your@email.com" class="btn btn-dark">Contact</a>
-                <a href="#about" class="btn btn-red">About Me</a>
-            </div>
+    <header class="site-header">
+        <div class="container nav-wrap">
+            <a href="#home" class="brand">William Meisch</a>
+            <nav class="site-nav" aria-label="Main navigation">
+                <a href="#about">About Me</a>
+                <a href="#work">Work</a>
+                <a href="#coworkers">Reviews</a>
+                <a href="#projects">Projects</a>
+            </nav>
         </div>
     </header>
 
-    <section id="about" class="section">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="underline"></div>
-            
-            <div class="about-stack">
-                <div class="about-row">
-                    <div class="about-text">
-                        <h3>Professional Impact</h3>
-                        <p>I currently serve as a <strong>Digital Content Associate</strong> on the Marketing Team at <strong>BlueForge Alliance</strong>. I am committed to strengthening the U.S. defense industrial base by driving advanced technology, supply chain optimization, and workforce development.</p>
+    <main>
+        <section id="home" class="hero">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <p class="eyebrow">Hi there,</p>
+                    <h1>I'm William Meisch.</h1>
+                    <p class="hero-sub">I build bold digital experiences that blend clean design, creative storytelling, and modern web execution.</p>
+                    <div class="hero-actions">
+                        <a href="mailto:willmeisch@gmail.com" class="btn btn-primary">Contact</a>
+                        <a href="#work" class="btn btn-ghost">Experience</a>
                     </div>
-                    <div class="about-visual">
-                        <div class="glass-card">
-                            <span class="glass-label">BLUEFORGE</span>
-                            <div class="glass-glow"></div>
+                </div>
+                <div class="hero-shape" aria-hidden="true">
+                    <div class="neon-structure">
+                        <span class="light-strip"></span>
+                        <span class="light-strip"></span>
+                        <span class="light-strip"></span>
+                    </div>
+                    <div class="ace-stage" id="tilt-shape">
+                        <div class="ace-card">
+                            <div class="ace-face ace-front">
+                                <span class="corner top">A♠</span>
+                                <span class="suit">♠</span>
+                                <span class="corner bottom">A♠</span>
+                            </div>
+                            <div class="ace-face ace-back">
+                                <span class="corner top">A♥</span>
+                                <span class="suit">♥</span>
+                                <span class="corner bottom">A♥</span>
+                            </div>
                         </div>
                     </div>
+                    <div class="shape-shadow"></div>
                 </div>
+            </div>
+        </section>
 
-                <div class="about-row inverse">
-                    <div class="about-visual">
-                        <div class="glass-card">
-                            <span class="glass-label">EXPERTISE</span>
-                            <div class="glass-glow"></div>
+        <section id="about" class="section">
+            <div class="container">
+                <h2>About Me</h2>
+                <p class="section-intro">I graduated from Texas State University with a degree in <strong>Digital Media Innovation</strong>, a STEM-designated program within the School of Journalism and Mass Communication. I currently serve as a Communications Specialist at <strong>BlueForge Alliance</strong>, a nonprofit strengthening the U.S. defense industrial base through advanced technology, supply chain optimization, and workforce development.</p>
+                <div class="about-grid">
+                    <article class="panel">
+                        <h3>Industry Experience</h3>
+                        <p>I bring a background in government contracting, nonprofit organizations, and mission-driven initiatives, supporting communications that connect industry, workforce development, and national security priorities.</p>
+                    </article>
+                    <article class="panel">
+                        <h3>Technical Focus</h3>
+                        <p>My work centers on internal and external communications strategy across web, email, and social media. I also develop internal communication systems using SharePoint and PowerApps, with a strong understanding of front-end technologies including HTML, CSS, and JavaScript.</p>
+                    </article>
+                    <article class="panel">
+                        <h3>What Drives Me</h3>
+                        <p>I’m motivated by mission-focused work that creates real impact—from strengthening national capabilities to supporting local communities. I’m also deeply interested in the evolving intersection of technology, digital platforms, and artificial intelligence.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="work" class="section alt">
+            <div class="container">
+                <h2>Work Experience</h2>
+                <p class="section-intro">A snapshot of the roles and responsibilities that define my professional foundation.</p>
+                <div class="timeline">
+                    <article class="timeline-item timeline-item-related current-role-card">
+                        <div class="timeline-head">
+                            <h3>Communication Specialist II</h3>
+                            <span class="timeline-date">Nov 2025 - Current</span>
                         </div>
-                    </div>
-                    <div class="about-text">
-                        <h3>Expertise & Passion</h3>
-                        <p>I graduated from <strong>Texas State University</strong> with a degree in Digital Media Innovation. My focus is on delivering fast-turn projects across design, web, and digital content—while leading full development on high-stakes internal assets.</p>
-                    </div>
+                        <p class="company">BlueForge Alliance</p>
+                        <p class="industry">Industry: Government Contracting</p>
+
+                        <div class="role-more-row">
+                            <button class="role-more-toggle" type="button" aria-expanded="false" aria-controls="current-role-more">
+                                More details ▾
+                            </button>
+                        </div>
+
+                        <div class="current-role-details" id="current-role-more" hidden>
+                            <p class="current-role-summary">I support internal and external communications strategy while serving as a technically inclined operator on the team—publishing website and email-platform content, creating digital and video assets, building internal forms and SharePoint intranet experiences, and helping align content with broader strategy and development goals.</p>
+                            <div class="inline-highlights" aria-label="Experience highlights">
+                                <article class="inline-highlight-card">
+                                    <p class="inline-highlight-value">500+</p>
+                                    <p class="inline-highlight-label">Travel approvals processed through the Power Automate + SharePoint workflow I built</p>
+                                </article>
+                                <article class="inline-highlight-card">
+                                    <p class="inline-highlight-value">15+</p>
+                                    <p class="inline-highlight-label">National engagement events where I represented the mission and spoke to priority audiences</p>
+                                </article>
+                                <article class="inline-highlight-card">
+                                    <p class="inline-highlight-value">250+</p>
+                                    <p class="inline-highlight-label">Employees supported through the internal SharePoint intranet experience I created</p>
+                                </article>
+                            </div>
+                        </div>
+                    </article>
+
+                    <div class="timeline-connector" aria-hidden="true">↑</div>
+
+                    <article class="timeline-item timeline-item-related">
+                        <div class="timeline-head">
+                            <h3>Digital Content Associate, Marketing &amp; Communications</h3>
+                            <span class="timeline-date">Sep 2023 - Nov 2025</span>
+                        </div>
+                        <p class="company">BlueForge Alliance</p>
+                        <p class="industry">Industry: Government Contracting</p>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="timeline-head">
+                            <h3>Digital Content Intern</h3>
+                            <span class="timeline-date">Jan 2022 - Aug 2023</span>
+                        </div>
+                        <p class="company">Camp Wapiyapi</p>
+                        <p class="industry">Industry: Nonprofit</p>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="timeline-head">
+                            <h3>Marketing &amp; UX Design Intern</h3>
+                            <span class="timeline-date">Jan 2022 - Sep 2022</span>
+                        </div>
+                        <p class="company">Realized Holdings</p>
+                        <p class="industry">Industry: Financial Technology</p>
+                    </article>
+                </div>
+                <div class="stack-bubbles" aria-label="Web and marketing stack">
+                    <span class="stack-bubble">Google Analytics</span>
+                    <span class="stack-bubble">Looker Dashboard</span>
+                    <span class="stack-bubble">Webflow</span>
+                    <span class="stack-bubble">WordPress</span>
+                    <span class="stack-bubble">Figma</span>
+                    <span class="stack-bubble">Codex</span>
+                    <span class="stack-bubble">HTML</span>
+                    <span class="stack-bubble">CSS</span>
+                    <span class="stack-bubble">JavaScript</span>
+                    <span class="stack-bubble">HubSpot</span>
+                    <span class="stack-bubble">Mailchimp</span>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="projects" class="section bg-alt">
-        <div class="container">
-            <h2 class="section-title">Projects</h2>
-            <div class="underline"></div>
-            
-            <div class="project-grid">
-                <div class="project-card">
-                    <div class="card-glow"></div>
-                    <div class="project-info">
-                        <h3>AeroDyne Systems</h3>
-                        <div class="tags"><span>Web Design</span><span>Figma</span></div>
-                        <p>A 4-frame Figma prototype exploring clean design, basic branding, and interactive prototyping.</p>
-                        <a href="#" class="project-link">View Project &rarr;</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="card-glow"></div>
-                    <div class="project-info">
-                        <h3>Latin Jams</h3>
-                        <div class="tags"><span>Web Design</span><span>WordPress</span></div>
-                        <p>A fast-turnaround site project focused on modern theme selection, clean design, and efficient build.</p>
-                        <a href="#" class="project-link">View Project &rarr;</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="card-glow"></div>
-                    <div class="project-info">
-                        <h3>Tropic Refresh</h3>
-                        <div class="tags"><span>Web Design</span><span>Figma</span></div>
-                        <p>A smooth, interactive animation designed to simulate the experience of selecting and viewing a cocktail recipe.</p>
-                        <a href="#" class="project-link">View Project &rarr;</a>
-                    </div>
+
+        <section id="coworkers" class="section coworker-section">
+            <div class="container">
+                <h2>What People I Work With Say</h2>
+                <div class="quote-grid">
+                    <article class="quote-card">
+                        <p class="quote-text">“Will is incredibly responsive and dependable—just a great person to work with.”</p>
+                        <p class="quote-name">— Alyssa Brigham, Education &amp; Training Manager, Blue Forge Alliance</p>
+                    </article>
+                    <article class="quote-card">
+                        <p class="quote-text">“OMG, brother—you are amazing! The SharePoint site looks amazing.”</p>
+                        <p class="quote-name">— Robert Barr, Director of Procurement, Blue Forge Alliance</p>
+                    </article>
+                    <article class="quote-card">
+                        <p class="quote-text">“Echoing Israel’s comments—the site looks amazing. We’re excited to begin loading content. Many thanks from the entire Fortuna team.”</p>
+                        <p class="quote-name">— Fortuna Project Team</p>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <footer class="footer">
-        <div class="container">
-            <p class="copyright">&copy; 2026 William Meisch &bull; Built with Precision</p>
+        <section id="projects" class="section alt">
+            <div class="container">
+                <h2>Projects</h2>
+                <p class="section-intro">Selected work samples with direct links to live pages, social profiles, and prototype showcases.</p>
+                <div class="gallery-grid">
+                    <a class="gallery-card gallery-card-link" href="#" target="_blank" rel="noopener noreferrer">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80" alt="Recovery Tracker project preview">
+                        <div class="gallery-body">
+                            <h3>Recovery Tracker</h3>
+                            <p class="gallery-description">I developed the Caffeine Recovery Tracker, a web app that helps visualize how caffeine consumption impacts daily recovery and performance. Users log drinks, sleep, and exercise, and JavaScript logic analyzes the data to generate a recovery estimate and personalized feedback. Entries are tracked through a calendar interface to highlight patterns over time. The project was created using HTML, CSS, and JavaScript with AI-assisted coding tools to support rapid development and problem solving.</p>
+                            <p class="gallery-cta">View Project</p>
+                        </div>
+                    </a>
+                    <a class="gallery-card gallery-card-link" href="#" target="_blank" rel="noopener noreferrer">
+                        <img src="https://images.unsplash.com/photo-1523726491678-bf852e717f6a?auto=format&fit=crop&w=900&q=80" alt="Aerodyne Systems project preview">
+                        <div class="gallery-body">
+                            <h3>Aerodyne Systems</h3>
+                            <p class="gallery-description">This is a four-frame Figma prototype exploring clean design, basic branding, and interactive prototyping. The project highlights my ability to build a cohesive visual identity and translate it into a functional, clickable site experience.</p>
+                            <p class="gallery-cta">View Project</p>
+                        </div>
+                    </a>
+                    <a class="gallery-card gallery-card-link" href="#" target="_blank" rel="noopener noreferrer">
+                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80" alt="Sixth Sense Supplements project preview">
+                        <div class="gallery-body">
+                            <h3>Sixth Sense Supplements</h3>
+                            <p class="gallery-description">Sixth Sense Supplements was a college project built as a WordPress site, blending design and entrepreneurial skills. Using Bootstrap, I created five unique pages focusing on branding, product display, and user navigation. As a mock fitness supplement company, the project allowed me to address business strategy, customer needs, and digital presence.</p>
+                            <p class="gallery-cta">View Project</p>
+                        </div>
+                    </a>
+                    <a class="gallery-card gallery-card-link" href="#" target="_blank" rel="noopener noreferrer">
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80" alt="Latin Jams project preview">
+                        <div class="gallery-body">
+                            <h3>Latin Jams</h3>
+                            <p class="gallery-description">A fast-turnaround WordPress site project focused on modern theme selection, clean design, and efficient build. All site copy was generated with AI, allowing me to concentrate on branding and layout while delivering a polished, functional site quickly. This project reflects speed, structure, and design consistency under tight timelines.</p>
+                            <p class="gallery-cta">View Project</p>
+                        </div>
+                    </a>
+                    <a class="gallery-card gallery-card-link" href="#" target="_blank" rel="noopener noreferrer">
+                        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=900&q=80" alt="Horror Movie Quiz project preview">
+                        <div class="gallery-body">
+                            <h3>Horror Movie Quiz</h3>
+                            <p class="gallery-description">A college project focused on JavaScript fundamentals, this 10-question horror quiz let users submit answers and receive a score. Prioritizing functionality over design, it showcases my ability to create interactive features with JavaScript logic, input validation, and scoring.</p>
+                            <p class="gallery-cta">View Project</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-actions">
+                <a class="footer-linkedin" href="https://www.linkedin.com/in/william-meisch-9b1b35224/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                        <path d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19ZM8.34 10.64H5.67V18H8.34V10.64ZM7 6.39C6.15 6.39 5.5 7.04 5.5 7.89C5.5 8.74 6.15 9.39 7 9.39C7.85 9.39 8.5 8.74 8.5 7.89C8.5 7.04 7.85 6.39 7 6.39ZM18.5 13.85C18.5 11.52 17.26 10.43 15.61 10.43C14.27 10.43 13.67 11.17 13.34 11.69V10.64H10.67V18H13.34V14.35C13.34 13.39 13.52 12.47 14.71 12.47C15.89 12.47 15.91 13.57 15.91 14.41V18H18.58L18.5 13.85Z"/>
+                    </svg>
+                    <span>LinkedIn</span>
+                </a>
+            </div>
         </div>
     </footer>
+
+    <button id="back-to-top-btn" class="back-to-top-btn" type="button" aria-label="Back to Top">Back to Top</button>
 
 </body>
 </html>
