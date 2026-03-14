@@ -581,7 +581,7 @@ h2 {
     justify-content: center;
 }
 
-.footer-ride-btn {
+.footer-top-btn {
     border: 1px solid rgba(167, 139, 250, 0.45);
     background: rgba(124, 58, 237, 0.18);
     color: var(--text);
@@ -591,105 +591,15 @@ h2 {
     cursor: pointer;
 }
 
-.footer-ride-btn:hover {
+.footer-top-btn:hover {
     background: rgba(124, 58, 237, 0.28);
 }
 
-.footer-ride-btn:disabled {
+.footer-top-btn:disabled {
     opacity: 0.75;
     cursor: default;
 }
 
- .ride-track-overlay {
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.18s ease;
-    z-index: 9999;
-    overflow: visible;
-}
-
-.ride-track-overlay.is-active {
-    opacity: 1;
-}
-
-.ride-track-svg {
-    position: absolute;
-    inset: 0;
-    width: 100vw;
-    height: 100vh;
-    overflow: visible;
-}
-
-.track-center {
-    fill: none;
-    stroke: transparent;
-    stroke-width: 1;
-}
-
-.track-rail {
-    fill: none;
-    stroke-width: 4;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    stroke: rgba(143, 215, 255, 0.98);
-    filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.5));
-}
-
-.track-ties {
-    fill: none;
-    stroke: rgba(202, 213, 232, 0.8);
-    stroke-width: 18;
-    stroke-linecap: butt;
-    stroke-dasharray: 2 18;
-    opacity: 0.85;
-    filter: drop-shadow(0 0 4px rgba(124, 58, 237, 0.25));
-}
-
-.ride-track-cart {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 52px;
-    height: 25px;
-    border-radius: 12px 18px 10px 10px;
-    border: 1px solid rgba(253, 186, 116, 0.95);
-    background:
-        radial-gradient(circle at 70% 26%, rgba(254, 215, 170, 0.3), transparent 50%),
-        linear-gradient(160deg, rgba(252, 146, 66, 0.95), rgba(220, 38, 38, 0.92));
-    box-shadow: 0 10px 22px rgba(9, 17, 34, 0.45), 0 0 18px rgba(251, 146, 60, 0.45);
-    transform: translate(-999px, -999px);
-    opacity: 0;
-}
-
-.ride-track-cart .cart-wheel {
-    position: absolute;
-    bottom: -5px;
-    width: 9px;
-    height: 9px;
-    border-radius: 50%;
-    background: rgba(220, 226, 237, 0.98);
-    box-shadow: 0 0 5px rgba(148, 163, 184, 0.58);
-}
-
-.ride-track-cart .cart-wheel:first-child { left: 8px; }
-.ride-track-cart .cart-wheel:last-child { right: 8px; }
-
-.ride-track-cart .cart-nose {
-    position: absolute;
-    right: -8px;
-    top: 5px;
-    width: 10px;
-    height: 12px;
-    border-radius: 38% 78% 75% 40%;
-    background: linear-gradient(130deg, rgba(254, 215, 170, 0.96), rgba(251, 113, 133, 0.9));
-}
-
-.ride-track-overlay.is-active .track-rail,
-.ride-track-overlay.is-active .track-ties {
-    animation: track-pulse 0.5s ease-in-out infinite alternate;
-}
 
 .footer-linkedin {
     display: inline-flex;
@@ -713,11 +623,6 @@ h2 {
 @keyframes float-card {
     0%, 100% { transform: rotateY(calc(var(--flip-y) + var(--click-flip))) translateY(0); }
     50% { transform: rotateY(calc(var(--flip-y) + var(--click-flip) + 3deg)) translateY(-10px); }
-}
-
-@keyframes track-pulse {
-    0% { opacity: 0.75; }
-    100% { opacity: 1; }
 }
 
 @media (max-width: 900px) {

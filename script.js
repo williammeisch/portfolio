@@ -63,57 +63,10 @@ if (roleMoreToggle && roleMorePanel) {
   });
 }
 
-const rideAgainBtn = document.getElementById('ride-again-btn');
-const rideTrackOverlay = document.getElementById('ride-track-overlay');
-const coasterPath = document.getElementById('coaster-center-path');
-const coasterCart = document.getElementById('ride-track-cart');
+const backToTopBtn = document.getElementById('back-to-top-btn');
 
-if (rideAgainBtn && rideTrackOverlay && coasterPath && coasterCart) {
-  const totalLength = coasterPath.getTotalLength();
-  const durationMs = 1900;
-
-  const setCartAtProgress = (progress) => {
-    const clamped = Math.min(1, Math.max(0, progress));
-    const distance = totalLength * clamped;
-    const point = coasterPath.getPointAtLength(distance);
-    const lookAhead = coasterPath.getPointAtLength(Math.min(totalLength, distance + 2));
-    const angle = Math.atan2(lookAhead.y - point.y, lookAhead.x - point.x) * (180 / Math.PI);
-
-    const x = (point.x / 1200) * window.innerWidth;
-    const y = (point.y / 1000) * window.innerHeight;
-
-    coasterCart.style.transform = `translate(${x - 17}px, ${y - 10}px) rotate(${angle}deg)`;
-    coasterCart.style.opacity = '1';
-  };
-
-  const runRide = () => {
-    const start = performance.now();
-
-    const step = (now) => {
-      const elapsed = now - start;
-      const t = Math.min(1, elapsed / durationMs);
-      const eased = 1 - Math.pow(1 - t, 3);
-      setCartAtProgress(eased);
-
-      if (t < 1) {
-        window.requestAnimationFrame(step);
-      } else {
-        coasterCart.style.opacity = '0';
-        rideTrackOverlay.classList.remove('is-active');
-        document.getElementById('home')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        rideAgainBtn.disabled = false;
-      }
-    };
-
-    window.requestAnimationFrame(step);
-  };
-
-  rideAgainBtn.addEventListener('click', () => {
-    if (rideAgainBtn.disabled) return;
-    rideAgainBtn.disabled = true;
-
-    rideTrackOverlay.classList.add('is-active');
-    setCartAtProgress(0);
-    runRide();
+if (backToTopBtn) {
+  backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 }
