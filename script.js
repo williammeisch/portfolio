@@ -63,17 +63,4 @@ if (roleMoreToggle && roleMorePanel) {
   });
 }
 
-const backToTopBtn = document.getElementById('back-to-top-btn');
 
-if (backToTopBtn) {
-  const toggleBackToTop = () => {
-    backToTopBtn.classList.toggle('is-visible', window.scrollY > 280);
-  };
-
-  window.addEventListener('scroll', toggleBackToTop, { passive: true });
-  toggleBackToTop();
-
-  backToTopBtn.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-}
