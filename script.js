@@ -63,10 +63,4 @@ if (roleMoreToggle && roleMorePanel) {
   });
 }
 
-const backToTopBtn = document.getElementById('back-to-top-btn');
 
-if (backToTopBtn) {
-  backToTopBtn.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-}
